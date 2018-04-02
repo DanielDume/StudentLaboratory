@@ -64,8 +64,6 @@ public class AppTest
 //        AddStudentInvalidName();
 //
 //        TestAddStudent();
-        testTC_EC_1();TC_EC_2();TC_EC_3();TC_EC_4();TC_EC_5();TC_EC_6();TC_EC_7();TC_EC_8();TC_EC_9();TC_EC_10();
-        TC_BVA_11();TC_BVA_12();TC_BVA_13();TC_BVA_14();TC_BVA_15();TC_BVA_16();TC_BVA_17();TC_BVA_18();TC_BVA_19();
     }
 
     public void TestAddStudent(){
@@ -278,7 +276,7 @@ public class AppTest
             assert false;
         }
     }
-    public void TC_EC_2(){
+    public void testTC_EC_2(){
         try{
             new FileWriter("test/students.txt").close();
             new FileWriter("test/laboratories.txt").close();
@@ -298,7 +296,7 @@ public class AppTest
             assert false;
         }
     }
-    public void TC_EC_3(){
+    public void testTC_EC_3(){
         try{
             new FileWriter("test/students.txt").close();
             new FileWriter("test/laboratories.txt").close();
@@ -318,7 +316,7 @@ public class AppTest
             assert false;
         }
     }
-    public void TC_EC_4(){
+    public void testTC_EC_4(){
         try{
             new FileWriter("test/students.txt").close();
             new FileWriter("test/laboratories.txt").close();
@@ -338,7 +336,7 @@ public class AppTest
             assert false;
         }
     }
-    public void TC_EC_5(){
+    public void testTC_EC_5(){
         try{
             new FileWriter("test/students.txt").close();
             new FileWriter("test/laboratories.txt").close();
@@ -358,7 +356,7 @@ public class AppTest
             assert false;
         }
     }
-    public void TC_EC_6(){
+    public void testTC_EC_6(){
         try{
             new FileWriter("test/students.txt").close();
             new FileWriter("test/laboratories.txt").close();
@@ -378,7 +376,7 @@ public class AppTest
             assert false;
         }
     }
-    public void TC_EC_7(){
+    public void testTC_EC_7(){
         try{
             new FileWriter("test/students.txt").close();
             new FileWriter("test/laboratories.txt").close();
@@ -398,7 +396,7 @@ public class AppTest
             assert false;
         }
     }
-    public void TC_EC_8(){
+    public void testTC_EC_8(){
         try{
             new FileWriter("test/students.txt").close();
             new FileWriter("test/laboratories.txt").close();
@@ -419,7 +417,7 @@ public class AppTest
         }
     }
 
-    public void TC_EC_9(){
+    public void testTC_EC_9(){
         try{
             new FileWriter("test/students.txt").close();
             new FileWriter("test/laboratories.txt").close();
@@ -439,7 +437,7 @@ public class AppTest
             assert false;
         }
     }
-    public void TC_EC_10(){
+    public void testTC_EC_10(){
         try{
             new FileWriter("test/students.txt").close();
             new FileWriter("test/laboratories.txt").close();
@@ -462,7 +460,7 @@ public class AppTest
 
 
 
-    public void TC_BVA_11(){
+    public void testTC_BVA_11(){
         try{
             new FileWriter("test/students.txt").close();
             new FileWriter("test/laboratories.txt").close();
@@ -483,7 +481,7 @@ public class AppTest
         }
     }
 
-    public void TC_BVA_12(){
+    public void testTC_BVA_12(){
         try{
             new FileWriter("test/students.txt").close();
             new FileWriter("test/laboratories.txt").close();
@@ -504,7 +502,7 @@ public class AppTest
         }
     }
 
-    public void TC_BVA_13(){
+    public void testTC_BVA_13(){
         try{
             new FileWriter("test/students.txt").close();
             new FileWriter("test/laboratories.txt").close();
@@ -524,7 +522,7 @@ public class AppTest
             assert false;
         }
     }
-    public void TC_BVA_14(){
+    public void testTC_BVA_14(){
         try{
             new FileWriter("test/students.txt").close();
             new FileWriter("test/laboratories.txt").close();
@@ -545,7 +543,7 @@ public class AppTest
         }
     }
 
-    public void TC_BVA_15(){
+    public void testTC_BVA_15(){
         try{
             new FileWriter("test/students.txt").close();
             new FileWriter("test/laboratories.txt").close();
@@ -566,7 +564,7 @@ public class AppTest
         }
     }
 
-    public void TC_BVA_16(){
+    public void testTC_BVA_16(){
         try{
             new FileWriter("test/students.txt").close();
             new FileWriter("test/laboratories.txt").close();
@@ -586,7 +584,7 @@ public class AppTest
             assert false;
         }
     }
-    public void TC_BVA_17(){
+    public void testTC_BVA_17(){
         try{
             new FileWriter("test/students.txt").close();
             new FileWriter("test/laboratories.txt").close();
@@ -607,7 +605,7 @@ public class AppTest
         }
     }
 
-    public void TC_BVA_18(){
+    public void testTC_BVA_18(){
         try{
             new FileWriter("test/students.txt").close();
             new FileWriter("test/laboratories.txt").close();
@@ -628,7 +626,7 @@ public class AppTest
         }
     }
 
-    public void TC_BVA_19(){
+    public void testTC_BVA_19(){
         try{
             new FileWriter("test/students.txt").close();
             new FileWriter("test/laboratories.txt").close();
