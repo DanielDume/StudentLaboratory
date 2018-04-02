@@ -22,6 +22,7 @@ public class AppTest
     @Override
     protected void setUp() throws Exception {
 
+        super.setUp();
         repository = new FileDataPersistence("test/students.txt");
         controller  = new LaboratoriesController("test/students.txt", "test/laboratories.txt");
 
@@ -30,6 +31,7 @@ public class AppTest
     @Override
     protected void tearDown() throws Exception{
 
+        super.tearDown();
         new FileWriter("test/students.txt").close();
         new FileWriter("test/laboratories.txt").close();
 
@@ -62,7 +64,7 @@ public class AppTest
 //        AddStudentInvalidName();
 //
 //        TestAddStudent();
-        TC_EC_1();TC_EC_2();TC_EC_3();TC_EC_4();TC_EC_5();TC_EC_6();TC_EC_7();TC_EC_8();TC_EC_9();TC_EC_10();
+        testTC_EC_1();TC_EC_2();TC_EC_3();TC_EC_4();TC_EC_5();TC_EC_6();TC_EC_7();TC_EC_8();TC_EC_9();TC_EC_10();
         TC_BVA_11();TC_BVA_12();TC_BVA_13();TC_BVA_14();TC_BVA_15();TC_BVA_16();TC_BVA_17();TC_BVA_18();TC_BVA_19();
     }
 
@@ -255,7 +257,8 @@ public class AppTest
         }
     }
 
-    public void TC_EC_1(){
+
+    public void testTC_EC_1(){
         try{
             new FileWriter("test/students.txt").close();
             new FileWriter("test/laboratories.txt").close();
