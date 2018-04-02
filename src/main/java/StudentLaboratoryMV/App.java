@@ -1,13 +1,19 @@
 package StudentLaboratoryMV;
 
-/**
- * Hello world!
- *
- */
-public class App 
-{
-    public static void main( String[] args )
-    {
-        System.out.println( "Hello World!" );
+import StudentLaboratoryMV.ui.LaboratoriesUI;
+
+import java.io.IOException;
+
+
+public class App {
+
+    public static void main(String[] args) {
+    	LaboratoriesUI view  = new LaboratoriesUI();
+
+        try {
+            view.run();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
