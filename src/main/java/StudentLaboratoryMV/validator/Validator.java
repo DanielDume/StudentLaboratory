@@ -29,14 +29,14 @@ public class Validator {
             return false;
         }
         Date date = new Date();
-        if(date.after(laboratory.getDate())) {
-            return false;
-        }
+//        if(date.after(laboratory.getDate())) {
+//            return false;
+//        }
         return true;
     }
 
     public static boolean validateGrade(float grade) {
-        if(grade > 1 && grade < 10) {
+        if(grade >= 1 && grade <= 10) {
             return true;
         }
         return false;

@@ -1,6 +1,7 @@
 package StudentLaboratoryMV;
 
 import StudentLaboratoryMV.controller.LaboratoriesController;
+import StudentLaboratoryMV.model.Laboratory;
 import StudentLaboratoryMV.model.Student;
 import StudentLaboratoryMV.repository.FileDataPersistence;
 import junit.framework.Test;
@@ -647,5 +648,48 @@ public class AppTest
         }
     }
 
+    public void testTC_DT_20(){
+        try{
+            new FileWriter("test/students.txt").close();
+            new FileWriter("test/laboratories.txt").close();
+        }
+        catch (Exception e){
+            e.printStackTrace();
+            assert false;
+        }
+        controller.saveStudent(new Student("ddie1901","gheorghe vasile", 500));
+        try{
+            controller.saveLaboratory(new Laboratory(1,"10/10/2010", 1, "ddie1901"));
+        }
+        catch (Exception e){
+            assert false;
+        }
+        try{
+            boolean result = controller.addGrade("ddie1901","1",10);
+            assertTrue(result);
+        }
+        catch (Exception e){
+            assert false;
+        }
 
+    }
+
+    public void testTC_DT_21(){
+        try{
+            new FileWriter("test/students.txt").close();
+            new FileWriter("test/laboratories.txt").close();
+        }
+        catch (Exception e){
+            e.printStackTrace();
+            assert false;
+        }
+        try{
+            boolean result = controller.addGrade("ddie1901","1",10);
+            assertTrue(result);
+        }
+        catch (Exception e){
+            assert true;
+        }
+
+    }
 }

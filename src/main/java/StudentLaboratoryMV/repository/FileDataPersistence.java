@@ -64,7 +64,10 @@ public class FileDataPersistence {
 
         String line;
 
+        boolean parsed = false;
+
         while ((line = reader.readLine()) != null) {
+            parsed = true;
             String[] temp = line.split(" ");
             String fileLabNumber = temp[0];
             String fileStudentNumber = temp[4];
@@ -83,6 +86,9 @@ public class FileDataPersistence {
 
         fileA.delete();
         fileB.renameTo(fileA);
+        if (!parsed){
+            throw new ParseException("BAD INPUT",1);
+        }
     }
 
     public Map<String, List<Laboratory>> getLaboratoryMap()
