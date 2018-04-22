@@ -692,4 +692,61 @@ public class AppTest
         }
 
     }
+
+    public void testTC_DT_22(){
+        try{
+            new FileWriter("test/students.txt").close();
+            new FileWriter("test/laboratories.txt").close();
+        }
+        catch (Exception e){
+            e.printStackTrace();
+            assert false;
+        }
+        controller.saveStudent(new Student("ddie1901","gheorghe vasile", 500));
+        try{
+            controller.saveLaboratory(new Laboratory(1,"10/10/2010", 1, "ddie1901"));
+        }
+        catch (Exception e){
+            assert false;
+        }
+        try{
+            controller.addGrade("ddie1901","1",10);
+            boolean result = controller.addGrade("ddie1901","1",9);
+            assertTrue(result);
+        }
+        catch (Exception e){
+            assert false;
+        }
+
+    }
+
+    public void testTC_DT_23(){
+        try{
+            new FileWriter("test/students.txt").close();
+            new FileWriter("test/laboratories.txt").close();
+        }
+        catch (Exception e){
+            e.printStackTrace();
+            assert false;
+        }
+        controller.saveStudent(new Student("ddie1901","gheorghe vasile", 500));
+        controller.saveStudent(new Student("ddie1902","ghe vasi", 300));
+        try{
+            controller.saveLaboratory(new Laboratory(1,"10/10/2010", 1, "ddie1901"));
+            controller.saveLaboratory(new Laboratory(2,"11/11/2010", 1, "ddie1902"));
+        }
+        catch (Exception e){
+            assert false;
+        }
+        try{
+            controller.addGrade("ddie1901","1",10);
+            controller.addGrade("ddie1902","2",8);
+            boolean result = controller.addGrade("ddie1901","1",9);
+            assertTrue(result);
+        }
+        catch (Exception e){
+            assert false;
+        }
+
+    }
 }
