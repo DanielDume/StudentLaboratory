@@ -799,5 +799,92 @@ public class AppTest
         }
 
     }
+    public void testINT_1(){
+        try{
+            new FileWriter("test/students.txt").close();
+            new FileWriter("test/laboratories.txt").close();
+        }
+        catch (Exception e){
+            e.printStackTrace();
+            assert false;
+        }
+        boolean res1,res2;
+        res1 = controller.saveStudent(new Student("ddie1901","gheorghe vasile", 500));
+        assertTrue(res1);
+        res2 = controller.saveStudent(new Student("ddie1902","ghe vasi", 300));
+        assertTrue(res2);
+    }
+    public void testINT_2(){
+        try{
+            new FileWriter("test/students.txt").close();
+            new FileWriter("test/laboratories.txt").close();
+        }
+        catch (Exception e){
+            e.printStackTrace();
+            assert false;
+        }
+        boolean res1,res2;
+        res1 = controller.saveStudent(new Student("ddie1901","gheorghe vasile", 500));
+        assertTrue(res1);
+        res2 = controller.saveStudent(new Student("ddie1902","ghe vasi", 300));
+        assertTrue(res2);
+        try{
+            res1 = controller.saveLaboratory(new Laboratory(1,"10/10/2010", 1, "ddie1901"));
+            assertTrue(res1);
+            res2 = controller.saveLaboratory(new Laboratory(2,"11/11/2010", 1, "ddie1902"));
+            assertTrue(res2);
+        }
+        catch (Exception e){
+            assert false;
+        }
+    }
+    public void testINT_3(){
+        try{
+            new FileWriter("test/students.txt").close();
+            new FileWriter("test/laboratories.txt").close();
+        }
+        catch (Exception e){
+            e.printStackTrace();
+            assert false;
+        }
+        boolean res1,res2;
+        res1 = controller.saveStudent(new Student("ddie1901","gheorghe vasile", 500));
+        assertTrue(res1);
+        res2 = controller.saveStudent(new Student("ddie1902","ghe vasi", 300));
+        assertTrue(res2);
+        try{
+            res1 = controller.saveLaboratory(new Laboratory(1,"10/10/2010", 1, "ddie1901"));
+            assertTrue(res1);
+            res2 = controller.saveLaboratory(new Laboratory(2,"11/11/2010", 1, "ddie1902"));
+            assertTrue(res2);
+        }
+        catch (Exception e){
+            assert false;
+        }
+        try{
+            boolean res;
+            res = controller.addGrade("ddie1901","1",10);
+            assertTrue(res);
+            res = controller.addGrade("ddie1902","2",4);
+            assertTrue(res);
+            boolean result = controller.addGrade("ddie1901","1",9);
+            assertTrue(result);
+        }
+        catch (Exception e){
+            assert false;
+        }
+        try{
+            List<Student> ls = controller.passedStudents();
+            int count = 0;
+            for (int i = 0; i < ls.size(); i++) {
+                count++;
+            }
+            assertEquals(1,count);
+        }
+        catch (Exception e){
+            assert false;
+        }
+    }
+
 
 }
